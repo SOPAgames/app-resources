@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-15",
+  "tiers": [
+    {
+      "id": "lite",
+      "label": { "en": "Lite", "es": "Lite" },
+      "hint": {
+        "en": "Recommended for iPhone 11 and up",
+        "es": "Recomendado para iPhone 11 en adelante"
+      }
+    },
+    {
+      "id": "balanced",
+      "label": { "en": "Balanced", "es": "Balanced" },
+      "hint": {
+        "en": "Recommended for iPhone 13 and up",
+        "es": "Recomendado para iPhone 13 en adelante"
+      }
+    },
+    {
+      "id": "pro",
+      "label": { "en": "Pro", "es": "Pro" },
+      "hint": {
+        "en": "Recommended for iPhone 15 and up",
+        "es": "Recomendado para iPhone 15 en adelante"
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "llama-3.2-1b",
+      "displayName": "Llama 3.2 1B",
+      "family": "Meta Llama 3.2 1B Instruct",
+      "tier": "lite",
+      "downloadUrl": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+      "fileName": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+      "sizeBytes": 870000000,
+      "sizeVerified": false,
+      "license": "Llama 3.2 Community License",
+      "minRamGb": 0,
+      "notes": "Floor candidate for iPhone 11/13."
+    },
+    {
+      "id": "gemma-3-1b",
+      "displayName": "Gemma 3 1B",
+      "family": "Google Gemma 3 1B Instruct",
+      "tier": "lite",
+      "downloadUrl": "https://huggingface.co/ggml-org/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf",
+      "fileName": "gemma-3-1b-it-Q4_K_M.gguf",
+      "sizeBytes": 806058240,
+      "sizeVerified": true,
+      "license": "Gemma Terms of Use",
+      "minRamGb": 0,
+      "notes": "Strong multilingual for its size."
+    },
+    {
+      "id": "qwen-2.5-1.5b",
+      "displayName": "Qwen 2.5 1.5B",
+      "family": "Alibaba Qwen 2.5 1.5B Instruct",
+      "tier": "balanced",
+      "downloadUrl": "https://huggingface.co/bartowski/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf",
+      "fileName": "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf",
+      "sizeBytes": 1060000000,
+      "sizeVerified": false,
+      "license": "Apache 2.0",
+      "minRamGb": 4,
+      "notes": "Permissive license. Borderline on 4 GB devices."
+    },
+    {
+      "id": "smollm2-1.7b",
+      "displayName": "SmolLM2 1.7B",
+      "family": "HuggingFace SmolLM2 1.7B Instruct",
+      "tier": "balanced",
+      "downloadUrl": "https://huggingface.co/bartowski/SmolLM2-1.7B-Instruct-GGUF/resolve/main/SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
+      "fileName": "SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
+      "sizeBytes": 1140000000,
+      "sizeVerified": false,
+      "license": "Apache 2.0",
+      "minRamGb": 4,
+      "notes": "Permissive license. English-only."
+    },
+    {
+      "id": "llama-3.2-3b",
+      "displayName": "Llama 3.2 3B",
+      "family": "Meta Llama 3.2 3B Instruct",
+      "tier": "pro",
+      "downloadUrl": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+      "fileName": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+      "sizeBytes": 2020000000,
+      "sizeVerified": false,
+      "license": "Llama 3.2 Community License",
+      "minRamGb": 5.5,
+      "notes": "Ceiling candidate for iPhone 15 (6 GB)."
+    },
+    {
+      "id": "gemma-4-e2b",
+      "displayName": "Gemma 4 E2B",
+      "family": "Google Gemma 4 E2B Instruct",
+      "tier": "pro",
+      "downloadUrl": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-Q4_K_M.gguf",
+      "fileName": "gemma-4-E2B-it-Q4_K_M.gguf",
+      "sizeBytes": 3106736256,
+      "sizeVerified": true,
+      "license": "Gemma Terms of Use",
+      "minRamGb": 5.5,
+      "notes": "Kept in for testing despite the \"E2B\" name being lighter than the weight: heavier than Llama 3.2 3B. Natively multimodal (text+image+audio) but this app only sends text for now."
+    },
+    {
+      "id": "gemma-4-e4b",
+      "displayName": "Gemma 4 E4B",
+      "family": "Google Gemma 4 E4B Instruct",
+      "tier": "pro",
+      "downloadUrl": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf",
+      "fileName": "gemma-4-E4B-it-Q4_K_M.gguf",
+      "sizeBytes": 4977169568,
+      "sizeVerified": true,
+      "license": "Gemma Terms of Use",
+      "minRamGb": 5.5,
+      "notes": "Heaviest catalog entry -- included to find where it breaks on iPhone 15 (6 GB), not because it is expected to comfortably fit. Natively multimodal (text+image+audio); text-only in this app."
+    }
+  ]
+}
