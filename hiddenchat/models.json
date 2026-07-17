@@ -61,20 +61,6 @@
       "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 }
     },
     {
-      "id": "smollm3-3b",
-      "displayName": "SmolLM3 3B",
-      "family": "HuggingFace SmolLM3 3B",
-      "tier": "balanced",
-      "downloadUrl": "https://huggingface.co/bartowski/HuggingFaceTB_SmolLM3-3B-GGUF/resolve/main/HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
-      "fileName": "HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
-      "sizeBytes": 1915305792,
-      "sizeVerified": true,
-      "license": "Apache 2.0",
-      "notes": "19/25 in testing, huge jump over SmolLM2 (8/25). Thinking model. Multilingual weaker than peers (6 European langs) -- fine for English-first.",
-      "minRamGb": 4,
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 }
-    },
-    {
       "id": "llama-3.2-3b",
       "displayName": "Llama 3.2 3B",
       "family": "Meta Llama 3.2 3B Instruct",
@@ -85,7 +71,7 @@
       "sizeVerified": false,
       "license": "Llama 3.2 Community License",
       "minRamGb": 5.5,
-      "notes": "22/25 in testing. Fast Pro option: not a thinking model, so no hidden-token latency, unlike the Gemma 4 pair.",
+      "notes": "Round 2: 30/35, the honest one -- only non-Gemma-4 model that admitted not knowing instead of fabricating. Fast Pro option: not a thinking model, so no hidden-token latency. Weak at translation.",
       "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 768 }
     },
     {
@@ -99,22 +85,8 @@
       "sizeVerified": true,
       "license": "Gemma Terms of Use",
       "minRamGb": 5.5,
-      "notes": "Kept in for testing despite the \"E2B\" name being lighter than the weight: heavier than Llama 3.2 3B. Natively multimodal (text+image+audio) but this app only sends text for now.",
-      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 768 }
-    },
-    {
-      "id": "gemma-4-e4b",
-      "displayName": "Gemma 4 E4B",
-      "family": "Google Gemma 4 E4B Instruct",
-      "tier": "pro",
-      "downloadUrl": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q4_K_M.gguf",
-      "fileName": "gemma-4-E4B-it-Q4_K_M.gguf",
-      "sizeBytes": 4977169568,
-      "sizeVerified": true,
-      "license": "Gemma Terms of Use",
-      "minRamGb": 5.5,
-      "notes": "Heaviest catalog entry -- included to find where it breaks on iPhone 15 (6 GB), not because it is expected to comfortably fit. Natively multimodal (text+image+audio); text-only in this app.",
-      "params": { "temperature": 1.0, "contextSize": 2048, "maxTokens": 768 }
+      "notes": "Round 2 winner (34/35), tied with E4B at 1.6x less weight. Honest (admits when it doesn't know), best Spanish. Thinking model (multimodal in the weights; text-only here). maxTokens 1024 so the answer isn't truncated after the hidden reasoning.",
+      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 1024 }
     }
   ]
 }
