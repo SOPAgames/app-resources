@@ -29,34 +29,6 @@
   ],
   "models": [
     {
-      "id": "llama-3.2-1b",
-      "displayName": "Llama 3.2 1B",
-      "family": "Meta Llama 3.2 1B Instruct",
-      "tier": "lite",
-      "downloadUrl": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
-      "fileName": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
-      "sizeBytes": 870000000,
-      "sizeVerified": false,
-      "license": "Llama 3.2 Community License",
-      "minRamGb": 0,
-      "notes": "Floor candidate for iPhone 11/13.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 512 }
-    },
-    {
-      "id": "gemma-3-1b",
-      "displayName": "Gemma 3 1B",
-      "family": "Google Gemma 3 1B Instruct",
-      "tier": "lite",
-      "downloadUrl": "https://huggingface.co/ggml-org/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf",
-      "fileName": "gemma-3-1b-it-Q4_K_M.gguf",
-      "sizeBytes": 806058240,
-      "sizeVerified": true,
-      "license": "Gemma Terms of Use",
-      "minRamGb": 0,
-      "notes": "Strong multilingual for its size.",
-      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 512 }
-    },
-    {
       "id": "qwen-2.5-1.5b",
       "displayName": "Qwen 2.5 1.5B",
       "family": "Alibaba Qwen 2.5 1.5B Instruct",
