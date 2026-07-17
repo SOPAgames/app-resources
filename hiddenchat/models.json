@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-17",
+  "reasoningFormats": [
+    { "open": "<think>", "close": "</think>" },
+    { "open": "<|channel>", "close": "<channel|>" }
+  ],
   "tiers": [
     {
       "id": "lite",
@@ -29,20 +33,6 @@
   ],
   "models": [
     {
-      "id": "llama-3.2-1b",
-      "displayName": "Llama 3.2 1B",
-      "family": "Meta Llama 3.2 1B Instruct",
-      "tier": "lite",
-      "downloadUrl": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
-      "fileName": "Llama-3.2-1B-Instruct-Q4_K_M.gguf",
-      "sizeBytes": 870000000,
-      "sizeVerified": false,
-      "license": "Llama 3.2 Community License",
-      "minRamGb": 0,
-      "notes": "Floor candidate for iPhone 11/13.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 512 }
-    },
-    {
       "id": "gemma-3-1b",
       "displayName": "Gemma 3 1B",
       "family": "Google Gemma 3 1B Instruct",
@@ -53,36 +43,36 @@
       "sizeVerified": true,
       "license": "Gemma Terms of Use",
       "minRamGb": 0,
-      "notes": "Strong multilingual for its size.",
+      "notes": "Lite floor. Best of the tiny models in testing (17/25).",
       "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 512 }
     },
     {
-      "id": "qwen-2.5-1.5b",
-      "displayName": "Qwen 2.5 1.5B",
-      "family": "Alibaba Qwen 2.5 1.5B Instruct",
+      "id": "qwen-3-1.7b",
+      "displayName": "Qwen3 1.7B",
+      "family": "Alibaba Qwen3 1.7B",
       "tier": "balanced",
-      "downloadUrl": "https://huggingface.co/bartowski/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/Qwen2.5-1.5B-Instruct-Q4_K_M.gguf",
-      "fileName": "Qwen2.5-1.5B-Instruct-Q4_K_M.gguf",
-      "sizeBytes": 1060000000,
-      "sizeVerified": false,
+      "downloadUrl": "https://huggingface.co/bartowski/Qwen_Qwen3-1.7B-GGUF/resolve/main/Qwen_Qwen3-1.7B-Q4_K_M.gguf",
+      "fileName": "Qwen_Qwen3-1.7B-Q4_K_M.gguf",
+      "sizeBytes": 1282439584,
+      "sizeVerified": true,
       "license": "Apache 2.0",
       "minRamGb": 4,
-      "notes": "Permissive license. Borderline on 4 GB devices.",
-      "params": { "temperature": 0.7, "contextSize": 4096, "maxTokens": 512 }
+      "notes": "Standout of testing: 24/25 at only 1.3 GB, tied with Gemma 4 E2B (3.1 GB). Thinking model (hides <think>). Apache 2.0.",
+      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 }
     },
     {
-      "id": "smollm2-1.7b",
-      "displayName": "SmolLM2 1.7B",
-      "family": "HuggingFace SmolLM2 1.7B Instruct",
+      "id": "smollm3-3b",
+      "displayName": "SmolLM3 3B",
+      "family": "HuggingFace SmolLM3 3B",
       "tier": "balanced",
-      "downloadUrl": "https://huggingface.co/bartowski/SmolLM2-1.7B-Instruct-GGUF/resolve/main/SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
-      "fileName": "SmolLM2-1.7B-Instruct-Q4_K_M.gguf",
-      "sizeBytes": 1140000000,
-      "sizeVerified": false,
+      "downloadUrl": "https://huggingface.co/bartowski/HuggingFaceTB_SmolLM3-3B-GGUF/resolve/main/HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
+      "fileName": "HuggingFaceTB_SmolLM3-3B-Q4_K_M.gguf",
+      "sizeBytes": 1915305792,
+      "sizeVerified": true,
       "license": "Apache 2.0",
+      "notes": "19/25 in testing, huge jump over SmolLM2 (8/25). Thinking model. Multilingual weaker than peers (6 European langs) -- fine for English-first.",
       "minRamGb": 4,
-      "notes": "Permissive license. English-only.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 512 }
+      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 }
     },
     {
       "id": "llama-3.2-3b",
@@ -95,7 +85,7 @@
       "sizeVerified": false,
       "license": "Llama 3.2 Community License",
       "minRamGb": 5.5,
-      "notes": "Ceiling candidate for iPhone 15 (6 GB).",
+      "notes": "22/25 in testing. Fast Pro option: not a thinking model, so no hidden-token latency, unlike the Gemma 4 pair.",
       "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 768 }
     },
     {
