@@ -43,9 +43,23 @@
       "sizeVerified": true,
       "license": "Gemma Terms of Use",
       "minRamGb": 0,
-      "notes": "Lite floor. Best of the tiny models in testing (17/25). Bundled in the app for instant first-run (no download).",
+      "notes": "17/25 in testing. Known issue: often replies in English even when written to in Spanish -- being compared against LFM2.5 on an iPhone 11 before deciding whether it stays.",
       "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 512 },
-      "bundled": true,
+      "thinking": { "thinks": false }
+    },
+    {
+      "id": "lfm2.5-1.2b",
+      "displayName": "LFM2.5 1.2B",
+      "family": "Liquid AI LFM2.5 1.2B Instruct",
+      "tier": "lite",
+      "downloadUrl": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF/resolve/main/LFM2.5-1.2B-Instruct-Q4_K_M.gguf",
+      "fileName": "LFM2.5-1.2B-Instruct-Q4_K_M.gguf",
+      "sizeBytes": 730895168,
+      "sizeVerified": true,
+      "license": "LFM Open License v1.0",
+      "minRamGb": 0,
+      "notes": "Built for on-device, natively multilingual (es/en/fr/de/ja/ko/zh/ar) -- holds Spanish instead of drifting to English. Smaller than Gemma 3 1B (697 MB). Does not reason, so it answers fast. License: free commercial use under 10M USD annual revenue.",
+      "params": { "temperature": 0.7, "contextSize": 4096, "maxTokens": 512 },
       "thinking": { "thinks": false }
     },
     {
