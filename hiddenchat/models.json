@@ -45,7 +45,8 @@
       "minRamGb": 0,
       "notes": "Lite floor. Best of the tiny models in testing (17/25). Bundled in the app for instant first-run (no download).",
       "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 512 },
-      "bundled": true
+      "bundled": true,
+      "thinking": { "thinks": false }
     },
     {
       "id": "qwen-3-1.7b",
@@ -58,8 +59,9 @@
       "sizeVerified": true,
       "license": "Apache 2.0",
       "minRamGb": 4,
-      "notes": "Standout of testing: 24/25 at only 1.3 GB, tied with Gemma 4 E2B (3.1 GB). Thinking model. PROVISIONAL: /no_think in the system prompt disables reasoning for speed on slow devices -- under evaluation on iPhone. Apache 2.0.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024, "systemPrompt": "You are a helpful, private assistant running entirely on this phone. Be concise and useful. /no_think" }
+      "notes": "Standout of testing: 24/25 at only 1.3 GB, tied with Gemma 4 E2B (3.1 GB). Thinking model; /no_think turns reasoning fully off (24/35 without it). Apache 2.0.",
+      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 },
+      "thinking": { "thinks": true, "offPrompt": "/no_think" }
     },
     {
       "id": "llama-3.2-3b",
@@ -73,7 +75,8 @@
       "license": "Llama 3.2 Community License",
       "minRamGb": 5.5,
       "notes": "Round 2: 30/35, the honest one -- only non-Gemma-4 model that admitted not knowing instead of fabricating. Fast Pro option: not a thinking model, so no hidden-token latency. Weak at translation.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 768 }
+      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 768 },
+      "thinking": { "thinks": false }
     },
     {
       "id": "gemma-4-e2b",
@@ -86,8 +89,9 @@
       "sizeVerified": true,
       "license": "Gemma Terms of Use",
       "minRamGb": 5.5,
-      "notes": "Round 2 winner (34/35), tied with E4B at 1.6x less weight. Honest (admits when it doesn't know), best Spanish. Thinking model (multimodal in the weights; text-only here). maxTokens 1024 so the answer isn't truncated after the hidden reasoning.",
-      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 1024 }
+      "notes": "Round 2 winner (34/35), tied with E4B at 1.6x less weight. Honest (admits when it doesn't know), best Spanish. Thinking is baked into the weights: can't be fully disabled, only reduced (offIsBrief). maxTokens 1024 so the answer isn't truncated after the hidden reasoning.",
+      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 1024 },
+      "thinking": { "thinks": true, "offPrompt": "Think briefly and keep your reasoning to a minimum before answering.", "offIsBrief": true }
     }
   ]
 }
