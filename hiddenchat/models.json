@@ -10,43 +10,28 @@
       "id": "lite",
       "label": { "en": "Lite", "es": "Lite" },
       "hint": {
-        "en": "Recommended for iPhone 11 and up",
-        "es": "Recomendado para iPhone 11 en adelante"
+        "en": "For iPhone XS and up",
+        "es": "Para iPhone XS en adelante"
       }
     },
     {
       "id": "balanced",
       "label": { "en": "Balanced", "es": "Balanced" },
       "hint": {
-        "en": "Recommended for iPhone 13 and up",
-        "es": "Recomendado para iPhone 13 en adelante"
+        "en": "For iPhone 13 and up",
+        "es": "Para iPhone 13 en adelante"
       }
     },
     {
       "id": "pro",
       "label": { "en": "Pro", "es": "Pro" },
       "hint": {
-        "en": "Recommended for iPhone 15 and up",
-        "es": "Recomendado para iPhone 15 en adelante"
+        "en": "For iPhone 15 and up",
+        "es": "Para iPhone 15 en adelante"
       }
     }
   ],
   "models": [
-    {
-      "id": "gemma-3-1b",
-      "displayName": "Gemma 3 1B",
-      "family": "Google Gemma 3 1B Instruct",
-      "tier": "lite",
-      "downloadUrl": "https://huggingface.co/ggml-org/gemma-3-1b-it-GGUF/resolve/main/gemma-3-1b-it-Q4_K_M.gguf",
-      "fileName": "gemma-3-1b-it-Q4_K_M.gguf",
-      "sizeBytes": 806058240,
-      "sizeVerified": true,
-      "license": "Gemma Terms of Use",
-      "minRamGb": 0,
-      "notes": "17/25 in testing. Known issue: often replies in English even when written to in Spanish -- being compared against LFM2.5 on an iPhone 11 before deciding whether it stays.",
-      "params": { "temperature": 1.0, "contextSize": 4096, "maxTokens": 512 },
-      "thinking": { "thinks": false }
-    },
     {
       "id": "lfm2.5-1.2b",
       "displayName": "LFM2.5 1.2B",
@@ -76,21 +61,6 @@
       "notes": "Standout of testing: 24/25 at only 1.3 GB, tied with Gemma 4 E2B (3.1 GB). Thinking model; /no_think turns reasoning fully off (24/35 without it). Apache 2.0.",
       "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 1024 },
       "thinking": { "thinks": true, "offPrompt": "/no_think" }
-    },
-    {
-      "id": "llama-3.2-3b",
-      "displayName": "Llama 3.2 3B",
-      "family": "Meta Llama 3.2 3B Instruct",
-      "tier": "pro",
-      "downloadUrl": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
-      "fileName": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
-      "sizeBytes": 2020000000,
-      "sizeVerified": false,
-      "license": "Llama 3.2 Community License",
-      "minRamGb": 5.5,
-      "notes": "Round 2: 30/35, the honest one -- only non-Gemma-4 model that admitted not knowing instead of fabricating. Fast Pro option: not a thinking model, so no hidden-token latency. Weak at translation.",
-      "params": { "temperature": 0.6, "contextSize": 4096, "maxTokens": 768 },
-      "thinking": { "thinks": false }
     },
     {
       "id": "gemma-4-e2b",
